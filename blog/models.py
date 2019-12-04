@@ -8,7 +8,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
-    def Publish(self):
+    def publish(self): #si hago cambios tengo que volver a iniciar la consola y volver a hacer los imports
         self.published_date = timezone.now()
         self.save()
 
